@@ -1,7 +1,7 @@
 .header {
-  max-width: 60rem;
+  max-width: 70rem;
   margin: auto;
-  padding: 2rem;
+  padding: 20px;
   display: flex;
   justify-content: left;
 }
@@ -11,7 +11,7 @@
 }
 .list a {
   text-decoration: none;
-  color: var(--color-primary-400);
+  color: var(--color-primary-800);
 }
 .list a:hover,
 .list a.active {

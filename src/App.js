@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import UserPage from './pages/User';
+import UserInformationPage from './pages/UserDetail';
 import UsersListPage from './pages/UsersList';
 import RootLayout from './pages/Root';
+import classes from './App.css';
 
 const router = createBrowserRouter([
   {
@@ -12,12 +13,16 @@ const router = createBrowserRouter([
         path: '/',
         element: <UsersListPage />,
       },
-      { path: '/:users', element: <UserPage /> },
+      { path: '/:users', element: <UserInformationPage /> },
     ],
   },
 ]);
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div className={classes.app}>
+      <RouterProvider router={router} />;
+    </div>
+  );
 }
 
 export default App;
