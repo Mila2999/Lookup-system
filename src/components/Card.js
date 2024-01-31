@@ -1,11 +1,12 @@
 import classes from './Card.module.css';
-function Card(props) {
+
+function Card({ title, name, email }) {
   return (
     <div className={classes.card}>
-      <div>{props.title}</div>
+      <div>{title}</div>
       <div>
-        <p>{props.name}</p>
-        <p>{props.email}</p>
+        <span>{name}</span>
+        <span>{email}</span>
       </div>
       <button>More info</button>
     </div>

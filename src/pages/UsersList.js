@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import Card from '../components/Card';
 import classes from '../components/UserList.module.css';
+import generateUserTitle from '../components/utils';
+
 function UsersListPage() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -18,8 +20,9 @@ function UsersListPage() {
     <div className={classes.container}>
       <header>
         <h2 className={classes.h2}>User List</h2>
+        <hr />
       </header>
-      <h1 className={classes.h2}>ALL USERS (7)</h1>
+      <h2 className={classes.h2}>ALL USERS ({users.length})</h2>
       <div className={classes.card}>
         {users.map((user) => (
           <Card
@@ -29,19 +32,8 @@ function UsersListPage() {
             email={user.email}
           />
         ))}
-        <Card />
       </div>
     </div>
   );
 }
 export default UsersListPage;
-
-function generateUserTitle(fullName) {
-  const [firstName, lastName] = fullName.split(' ');
-
-  const firstLetterFirstName = firstName.charAt(0);
-  const firstLetterLastName = lastName.charAt(0);
-
-  const title = `${firstLetterFirstName}${firstLetterLastName}`;
-  return title;
-}
