@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import UserPage from './pages/User';
-import UsersPage from './pages/Users';
+import UsersListPage from './pages/UsersList';
 import RootLayout from './pages/Root';
 
 const router = createBrowserRouter([
@@ -8,7 +8,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     children: [
-      { path: '/', element: <UsersPage /> },
+      {
+        path: '/',
+        element: <UsersListPage />,
+      },
       { path: '/users', element: <UserPage /> },
     ],
   },
