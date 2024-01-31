@@ -1,3 +1,16 @@
-.card {
+.card-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust as needed */
+  padding: 20px; /* Add padding to the container if desired */
+}
+
+.card {
+  width: calc(20% - 20px); /* Adjust width and margin as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  background-color: #f0f0f0;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
 }
