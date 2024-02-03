@@ -9,10 +9,11 @@ function Card(props) {
         <span className={classes.name}>{props.name}</span>
         <span className={classes.email}>{props.email}</span>
       </div>
-      <a href="/1">Go TO</a>
-      {/* <button className={classes.button} onClick={props.onClick}>
-        More info
-      </button> */}
+      <a href="/1">
+        <button className={classes.button} onClick={props.onClick}>
+          More info
+        </button>
+      </a>
     </div>
   );
 }

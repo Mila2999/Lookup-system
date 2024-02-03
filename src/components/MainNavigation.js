@@ -20,7 +20,7 @@ function MainNavigation() {
               className={({ isActive }) => (isActive ? classes.active : undefined)}
               end
             >
-              Lianna Grand
+              User Name
             </NavLink>
           </ol>
         </ul>
