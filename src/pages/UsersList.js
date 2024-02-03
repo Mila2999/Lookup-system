@@ -1,13 +1,8 @@
-import MainNavigation from '../components/MainNavigation';
 import UsersList from '../components/UsersList';
-
+// import UserDetails from '../components/UserDetails';
 function UsersListPage() {
   return (
     <>
-      <header>
-        <MainNavigation />
-        <hr />
-      </header>
       <UsersList />
     </>
   );

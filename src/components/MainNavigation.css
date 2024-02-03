@@ -1,19 +1,29 @@
 .header {
-  max-width: 70rem;
-  margin: auto;
-  padding: 20px;
+  /* max-width: 70rem; */
+  margin: 0;
   display: flex;
   justify-content: left;
 }
 .list {
   display: flex;
-  gap: 1rem;
 }
 .list a {
   text-decoration: none;
-  color: var(--color-primary-800);
+
+  color: var(--color-primary-500);
 }
 .list a:hover,
 .list a.active {
-  color: var(--color-primary-800);
+  color: var(--color-primary-500);
+}
+
+hr {
+  border: 1px solid #ccc; /* Set border color and style */
+  /* margin: 10px 10px 10px 40px; Add space above and below the hr */
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
 }

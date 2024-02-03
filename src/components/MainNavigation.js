@@ -5,7 +5,7 @@ function MainNavigation() {
     <header className={classes.header}>
       <nav>
         <ul>
-          <lu className={classes.list}>
+          <ol className={classes.list}>
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? classes.active : undefined)}
@@ -13,8 +13,8 @@ function MainNavigation() {
             >
               {`Users List > `}
             </NavLink>
-          </lu>
-          <lu className={classes.list}>
+          </ol>
+          <ol className={classes.list}>
             <NavLink
               to="/:user"
               className={({ isActive }) => (isActive ? classes.active : undefined)}
@@ -22,7 +22,7 @@ function MainNavigation() {
             >
               Lianna Grand
             </NavLink>
-          </lu>
+          </ol>
         </ul>
       </nav>
     </header>

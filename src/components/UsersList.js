@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import Card from './Card';
 
-import generateUserTitle from './utils';
+import { cutUserName, generateUserTitle } from '../utils/utils';
 import classes from './UsersList.module.css';
 
 function UsersList() {
   const [users, setUsers] = useState([]);
+  // CR use react loader.
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((res) => {
@@ -19,21 +20,19 @@ function UsersList() {
 
   return (
     <div>
-      <main>
-        <div>
-          <h2 className={classes.h2}>ALL USERS ({users.length})</h2>
-          <div className={classes.card}>
-            {users.map((user) => (
-              <Card
-                key={user.id}
-                title={generateUserTitle(user.name)}
-                name={user.name}
-                email={user.email}
-              />
-            ))}
-          </div>
+      <div>
+        <h2 className={classes.h2}>ALL USERS ({users.length})</h2>
+        <div className={classes.usersContainer}>
+          {users.map((user) => (
+            <Card
+              key={user.id}
+              title={generateUserTitle(user.name)}
+              name={cutUserName(user.name)}
+              email={user.email.toLowerCase()}
+            />
+          ))}
         </div>
-      </main>
+      </div>
     </div>
   );
 }
