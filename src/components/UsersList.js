@@ -19,10 +19,6 @@ function UsersList() {
 
   return (
     <div>
-      <header>
-        <h1 className={classes.h1}>User List</h1>
-        <hr />
-      </header>
       <main>
         <div>
           <h2 className={classes.h2}>ALL USERS ({users.length})</h2>

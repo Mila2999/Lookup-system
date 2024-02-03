@@ -1,6 +1,15 @@
+import MainNavigation from '../components/MainNavigation';
 import UsersList from '../components/UsersList';
 
 function UsersListPage() {
-  return <UsersList />;
+  return (
+    <>
+      <header>
+        <MainNavigation />
+        <hr />
+      </header>
+      <UsersList />
+    </>
+  );
 }
 export default UsersListPage;
