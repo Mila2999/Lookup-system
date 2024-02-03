@@ -24,7 +24,7 @@ function UsersList() {
         <hr />
       </header>
       <main>
-        <div className={classes.main}>
+        <div>
           <h2 className={classes.h2}>ALL USERS ({users.length})</h2>
           <div className={classes.card}>
             {users.map((user) => (

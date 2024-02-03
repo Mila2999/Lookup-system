@@ -11,7 +11,16 @@ function MainNavigation() {
               className={({ isActive }) => (isActive ? classes.active : undefined)}
               end
             >
-              Users List
+              {`Users List > `}
+            </NavLink>
+          </lu>
+          <lu className={classes.list}>
+            <NavLink
+              to="/:user"
+              className={({ isActive }) => (isActive ? classes.active : undefined)}
+              end
+            >
+              Lianna Grand
             </NavLink>
           </lu>
         </ul>
