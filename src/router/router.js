@@ -12,8 +12,30 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <UsersListPage />,
+        loader: async () => {
+          const response = await fetch('https://jsonplaceholder.typicode.com/users');
+          if (!response.ok) {
+            return [];
+          }
+          const users = await response.json();
+          console.log(users);
+          return users;
+        },
       },
-      { path: '/:user', element: <UserDetailPage /> },
+      {
+        path: '/:user',
+        element: <UserDetailPage />,
+        loader: async () => {
+          const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+          if (!response.ok) {
+            return null;
+          } else {
+            const user = await response.json();
+            console.log(user);
+            return user;
+          }
+        },
+      },
     ],
   },
 ]);

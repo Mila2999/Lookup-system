@@ -7,11 +7,11 @@ function MainNavigation() {
         <ul>
           <ol className={classes.list}>
             <NavLink
-              to="/"
+              to="/users"
               className={({ isActive }) => (isActive ? classes.active : undefined)}
               end
             >
-              {`Users List > `}
+              Users List
             </NavLink>
           </ol>
           <ol className={classes.list}>
@@ -20,7 +20,7 @@ function MainNavigation() {
               className={({ isActive }) => (isActive ? classes.active : undefined)}
               end
             >
-              User Name
+              {`>`}
             </NavLink>
           </ol>
         </ul>

@@ -1,55 +1,36 @@
-import { useState, useEffect } from 'react';
-// import UsersList from './UsersList';
-function UserDetails() {
-  const [selectedUser, setSelectedUser] = useState(undefined);
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
-        const data = await response.json();
+// import { useState, useEffect } from 'react';
 
-        setSelectedUser(data);
-        // setUsers(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    }
-    fetchData();
-  }, [1]);
-
-  console.log(selectedUser);
-
-  if (!selectedUser) {
+function UserDetails({ user }) {
+  if (!user) {
     return <div>Loading...</div>;
   }
-
   return (
     <div>
       <div>
-        <h1> {selectedUser.name} </h1>
-        <a href="/">
+        <h1> {user.name} </h1>
+        <a href="/users">
           <button>Back</button>
         </a>
       </div>
       <div>
-        <h1>User Info</h1>
-        <p>Name: {selectedUser.name}</p>
-        <p>Username: {selectedUser.username}</p>
-        <p>Phone: {selectedUser.phone}</p>
-        <p>Email: {selectedUser.email}</p>
-        <p>Website: {selectedUser.website}</p>
+        <h2>User Info</h2>
+        <p>Name: {user.name}</p>
+        <p>Username: {user.username}</p>
+        <p>Phone: {user.phone}</p>
+        <p>Email: {user.email}</p>
+        <p>Website: {user.website}</p>
       </div>
       <div>
-        <h1>Address</h1>
-        <p>Street: {selectedUser.address.street}</p>
-        <p>Suite: {selectedUser.address.suite}</p>
-        <p>City:{selectedUser.address.city}</p>
-        <p>Zipcode: {selectedUser.address.zipcode}</p>
+        <h2>Address</h2>
+        <p>Street: {user.address.street}</p>
+        <p>Suite: {user.address.suite}</p>
+        <p>City:{user.address.city}</p>
+        <p>Zipcode: {user.address.zipcode}</p>
       </div>
       <div>
-        <h1>Company</h1>
-        <p>Name:{selectedUser.company.name}</p>
-        <p>CatchPhrase:{selectedUser.company.catchPhrase}</p>
+        <h2>Company</h2>
+        <p>Name:{user.company.name}</p>
+        <p>CatchPhrase:{user.company.catchPhrase}</p>
       </div>
     </div>
   );

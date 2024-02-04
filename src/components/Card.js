@@ -1,5 +1,5 @@
 import classes from './Card.module.css';
-
+import { Link } from 'react-router-dom';
 function Card(props) {
   // CR destruct pros {title ,name ,email}
   return (
@@ -9,11 +9,11 @@ function Card(props) {
         <span className={classes.name}>{props.name}</span>
         <span className={classes.email}>{props.email}</span>
       </div>
-      <a href="/1">
+      <Link to="/:user">
         <button className={classes.button} onClick={props.onClick}>
           More info
         </button>
-      </a>
+      </Link>
     </div>
   );
 }

@@ -1,23 +1,10 @@
-import { useState, useEffect } from 'react';
+import UsersListPage from '../pages/UsersList';
 import Card from './Card';
 
 import { cutUserName, generateUserTitle } from '../utils/utils';
 import classes from './UsersList.module.css';
 
-function UsersList() {
-  const [users, setUsers] = useState([]);
-  // CR use react loader.
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setUsers(data);
-      });
-  }, []);
-
+function UsersList({ users }) {
   return (
     <div>
       <div>
