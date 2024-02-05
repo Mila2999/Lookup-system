@@ -1,6 +1,6 @@
 /* too much CSS i don't understand anything */
 .card {
-  height: 200px;
+  height: 300px;
   width: 18%;
   display: flex;
   flex-direction: column;
@@ -15,12 +15,11 @@
 .title {
   display: flex;
   justify-content: center;
-  font-size: 25px;
+  font-size: 30px;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  /* background-color: rgb(243, 246, 248); */
   background-color: rgb(85, 100, 112, 0.07);
   color: rgb(85, 100, 112);
 }
@@ -33,17 +32,18 @@
 .name {
   font-family: 'Girl Sands', sans-serif;
   color: rgb(2, 57, 65);
+  font-size: 25px;
 }
 .email {
   padding-top: 5px;
   color: rgb(167, 172, 174, 0.9);
-  font-size: 12px;
+  font-size: 20px;
 }
 .button {
   width: 100px;
   height: 30px;
   font: inherit;
-  font-size: 10px;
+  font-size: 15px;
 
   color: white;
   border-radius: 5px;

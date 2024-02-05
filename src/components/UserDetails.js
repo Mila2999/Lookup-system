@@ -1,16 +1,16 @@
-// import { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 function UserDetails({ user }) {
   if (!user) {
-    return <div>Loading...</div>;
+    return null;
   }
+
   return (
     <div>
       <div>
         <h1> {user.name} </h1>
-        <a href="/users">
+        <Link to="/">
           <button>Back</button>
-        </a>
+        </Link>
       </div>
       <div>
         <h2>User Info</h2>

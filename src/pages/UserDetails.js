@@ -8,8 +8,6 @@ function UserDetailsPage() {
   console.log(user);
   return (
     <>
-      <MainNavigation />
-      <hr />
       <UserDetails user={user} />
     </>
   );

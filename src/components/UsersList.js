@@ -1,4 +1,3 @@
-import UsersListPage from '../pages/UsersList';
 import Card from './Card';
 
 import { cutUserName, generateUserTitle } from '../utils/utils';
