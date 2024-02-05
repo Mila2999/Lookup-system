@@ -1,40 +1,26 @@
 import { createBrowserRouter } from 'react-router-dom';
-import UserDetailPage from '../pages/UserDetails';
-import UsersListPage from '../pages/UsersList';
+import UserDetailPage, { loader as userDetailLoader } from '../pages/UserDetails';
+import UsersListPage, { loader as usersLoader } from '../pages/UsersList';
 import RootLayout from '../pages/Root';
+import ErrorPage from '../pages/Error';
 
 // CR router should be in another file. please use import
 const router = createBrowserRouter([
   {
     path: '/',
+    id: 'user-detail',
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
         element: <UsersListPage />,
-        loader: async () => {
-          const response = await fetch('https://jsonplaceholder.typicode.com/users');
-          if (!response.ok) {
-            return [];
-          }
-          const users = await response.json();
-          console.log(users);
-          return users;
-        },
+        loader: usersLoader,
       },
       {
-        path: '/:user',
+        path: '/:userId',
         element: <UserDetailPage />,
-        loader: async () => {
-          const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
-          if (!response.ok) {
-            return null;
-          } else {
-            const user = await response.json();
-            console.log(user);
-            return user;
-          }
-        },
+        loader: userDetailLoader,
       },
     ],
   },

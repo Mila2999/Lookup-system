@@ -12,6 +12,7 @@ function UsersList({ users }) {
           {users.map((user) => (
             <Card
               key={user.id}
+              id={user.id}
               title={generateUserTitle(user.name)}
               name={cutUserName(user.name)}
               email={user.email.toLowerCase()}
