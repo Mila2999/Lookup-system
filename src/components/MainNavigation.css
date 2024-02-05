@@ -18,8 +18,8 @@
 }
 
 hr {
-  border: 1px solid #ccc; /* Set border color and style */
-  /* margin: 10px 10px 10px 40px; Add space above and below the hr */
+  border: 1px solid #e2dfdf;
+  margin: 20px 30px 20px 30px;
 }
 
 ul,

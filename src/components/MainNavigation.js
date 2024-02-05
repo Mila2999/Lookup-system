@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import classes from './MainNavigation.css';
 
-function MainNavigation({ userName }) {
+function MainNavigation(props) {
   return (
     <header className={classes.header}>
       <nav>
@@ -21,7 +21,7 @@ function MainNavigation({ userName }) {
               className={({ isActive }) => (isActive ? classes.active : undefined)}
               end
             >
-              <span>{`>`}</span>
+              {props.userName}
             </NavLink>
           </ol>
         </ul>

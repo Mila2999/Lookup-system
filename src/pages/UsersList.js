@@ -1,11 +1,14 @@
 import { useLoaderData } from 'react-router-dom';
 import UsersList from '../components/UsersList';
+import MainNavigation from '../components/MainNavigation';
 
 function UsersListPage() {
   const users = useLoaderData();
 
   return (
     <>
+      <MainNavigation />
+      <hr />
       <UsersList users={users} />
     </>
   );
