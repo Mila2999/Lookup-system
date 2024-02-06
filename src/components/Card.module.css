@@ -4,9 +4,9 @@
   width: 18%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-arround;
   align-items: center;
-  padding: 15px;
+  padding: 20px;
   box-sizing: border-box;
   background-color: white;
   border-radius: 10px;
@@ -30,19 +30,18 @@
   align-items: center;
   flex: 1;
   min-width: 300px;
-  margin: 10px;
-  padding: 20px;
+  /* margin: 30px;
+  padding: 20px; */
 }
-.name {
+p {
   font-family: 'Girl Sands', sans-serif;
   color: rgb(2, 57, 65);
   font-size: 18px;
 }
-.email {
-  padding-top: 5px;
-  color: rgb(167, 172, 174, 0.8);
+span {
+  color: rgb(167, 172, 174, 0.9);
 }
-.button {
+button {
   width: 100px;
   height: 30px;
   font: inherit;
@@ -53,3 +52,13 @@
   cursor: pointer;
   border: 0;
 }
+/* @media (max-width: 768px) {
+  .card {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    flex-basis: calc(50% - 20px);
+  }
+} */

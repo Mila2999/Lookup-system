@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+
+import classes from './UserDetails.module.css';
 function UserDetails({ user }) {
   if (!user) {
     return null;
@@ -7,30 +9,52 @@ function UserDetails({ user }) {
   return (
     <div>
       <div>
-        <h1> {user.name} </h1>
+        <h2> {user.name.toUpperCase()} </h2>
         <Link to="/">
-          <button>Back</button>
+          <button className={classes.button}>Back</button>
         </Link>
       </div>
       <div>
         <h2>User Info</h2>
-        <p>Name: {user.name}</p>
-        <p>Username: {user.username}</p>
-        <p>Phone: {user.phone}</p>
-        <p>Email: {user.email}</p>
-        <p>Website: {user.website}</p>
+        <p>
+          Name: <span>{user.name}</span>
+        </p>
+        <p>
+          Username:<span> {user.username}</span>
+        </p>
+        <p>
+          Phone:<span> {user.phone}</span>
+        </p>
+        <p>
+          Email: <span>{user.email}</span>
+        </p>
+        <p>
+          Website:<span> {user.website}</span>
+        </p>
       </div>
       <div>
-        <h2>Address</h2>
-        <p>Street: {user.address.street}</p>
-        <p>Suite: {user.address.suite}</p>
-        <p>City:{user.address.city}</p>
-        <p>Zipcode: {user.address.zipcode}</p>
+        <h3>Address</h3>
+        <p>
+          Street:<span> {user.address.street}</span>
+        </p>
+        <p>
+          Suite: <span>{user.address.suite}</span>
+        </p>
+        <p>
+          City:<span>{user.address.city}</span>
+        </p>
+        <p>
+          Zipcode: <span>{user.address.zipcode}</span>
+        </p>
       </div>
       <div>
-        <h2>Company</h2>
-        <p>Name:{user.company.name}</p>
-        <p>CatchPhrase:{user.company.catchPhrase}</p>
+        <h3>Company</h3>
+        <p>
+          Name: <span>{user.company.name}</span>
+        </p>
+        <p>
+          CatchPhrase: <span>{user.company.catchPhrase}</span>
+        </p>
       </div>
     </div>
   );

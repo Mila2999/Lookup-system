@@ -1,12 +1,11 @@
 import classes from './Card.module.css';
 import { Link } from 'react-router-dom';
 function Card(props) {
-  console.log(props);
   return (
     <div className={classes.card}>
       <div className={classes.title}>{props.title}</div>
       <div className={classes.userDetailsContainer}>
-        <span className={classes.name}>{props.name}</span>
+        <p className={classes.name}>{props.name}</p>
         <span className={classes.email}>{props.email}</span>
       </div>
       <Link to={'/' + props.id}>

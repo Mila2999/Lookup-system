@@ -5,26 +5,17 @@ function MainNavigation(props) {
   return (
     <header className={classes.header}>
       <nav>
-        <ul>
-          <ol className={classes.list}>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? classes.active : undefined)}
-              end
-            >
-              <span> Users List </span>
-            </NavLink>
-          </ol>
-          <ol className={classes.list}>
-            <NavLink
-              to="/:userId"
-              className={({ isActive }) => (isActive ? classes.active : undefined)}
-              end
-            >
-              {props.userName}
-            </NavLink>
-          </ol>
-        </ul>
+        <NavLink to="/" className={({ isActive }) => (isActive ? classes.active : undefined)} end>
+          <p> Users List </p>
+        </NavLink>
+        <h2>{`>`}</h2>
+        <NavLink
+          to="/:userId"
+          className={({ isActive }) => (isActive ? classes.active : undefined)}
+          end
+        >
+          <span> {props.userName}</span>
+        </NavLink>
       </nav>
     </header>
   );
