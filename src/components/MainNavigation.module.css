@@ -1,0 +1,36 @@
+/* .header {
+  max-width: 70rem;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+} */
+/* 
+.navItems {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: red;
+  /* display: inline-block;
+  width: fit-content; 
+} */
+
+/* .arrow {
+  margin: 0 10px;
+  width: 20px;
+  padding-bottom: 30px;
+  text-align: left;
+  color: rgb(106, 173, 186);
+} */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  display: flex;
+}
