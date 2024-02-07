@@ -6,18 +6,24 @@ function UserDetails({ user }) {
   }
 
   const renderUserInfo = () => {
-    const userInfoKeys = Object.keys(user);
-    const userInfo = [];
+    return Object.keys(user).map((u) => (
+      <p key={u}>
+        {u.charAt(0).toUpperCase() + u.slice(1)}: {user[u]}
+      </p>
+    ));
 
-    userInfoKeys.forEach((key) => {
-      userInfo.push(
-        <p key={key}>
-          {key.charAt(0).toUpperCase() + key.slice(1)}: {user[key]}
-        </p>
-      );
-    });
+    // const userInfoKeys = Object.keys(user);
+    // const userInfo = [];
 
-    return userInfo;
+    // userInfoKeys.forEach((key) => {
+    //   userInfo.push(
+    //     <p key={key}>
+    //       {key.charAt(0).toUpperCase() + key.slice(1)}: {user[key]}
+    //     </p>
+    //   );
+    // });
+
+    // return userInfo;
   };
 
   const renderAddressInfo = () => {
@@ -75,6 +81,3 @@ function UserDetails({ user }) {
 }
 
 export default UserDetails;
-
- 
-  

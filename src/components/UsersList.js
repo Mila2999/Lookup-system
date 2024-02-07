@@ -7,7 +7,7 @@ function UsersList({ users }) {
   return (
     <div>
       <div>
-        <h2 className={classes.h2}>ALL USERS ({users.length})</h2>
+        <h2>ALL USERS ({users.length})</h2>
         <div className={classes.usersContainer}>
           {users.map((user) => (
             <Card

@@ -33,7 +33,7 @@ function UserDetails({ user }) {
         </p>
       </div>
       <div>
-        <h3>Address</h3>
+        <h2>Address</h2>
         <p>
           Street:<span> {user.address.street}</span>
         </p>
@@ -41,14 +41,14 @@ function UserDetails({ user }) {
           Suite: <span>{user.address.suite}</span>
         </p>
         <p>
-          City:<span>{user.address.city}</span>
+          City: <span>{user.address.city}</span>
         </p>
         <p>
           Zipcode: <span>{user.address.zipcode}</span>
         </p>
       </div>
       <div>
-        <h3>Company</h3>
+        <h2>Company</h2>
         <p>
           Name: <span>{user.company.name}</span>
         </p>
