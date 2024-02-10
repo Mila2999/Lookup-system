@@ -1,26 +1,46 @@
 import { Link } from 'react-router-dom';
 
 import classes from './UserDetails.module.css';
+import { capitalizeFirstLetter } from '../utils/utils';
 function UserDetails({ user }) {
   if (!user) {
     return null;
   }
 
+  const userInfo = {
+    name: user.name,
+    userName: user.userName,
+    phone: user.phone,
+    email: user.email,
+    website: user.website,
+  };
+
+  const userInfoHtml = Object.keys(userInfo).map((key) => {
+    return (
+      <div className={classes.wrapperInfo}>
+        <div>{capitalizeFirstLetter(key)}</div>
+        <span className={classes.space}>:</span>
+        <div>{userInfo[key]}</div>
+      </div>
+    );
+  });
+
   return (
     <div>
-      <div>
+      <div className={classes.header}>
         <h2> {user.name.toUpperCase()} </h2>
         <Link to="/">
-          <button className={classes.button}>Back</button>
+          <button className={classes.button}>{' < '}Back</button>
         </Link>
       </div>
       <div>
         <h2>User Info</h2>
-        <p>
-          Name: <span>{user.name}</span>
+        {userInfoHtml}
+        {/* <p>
+          Name:<span>{user.name}</span>
         </p>
         <p>
-          Username:<span> {user.username}</span>
+          Username:<span>{user.username}</span>
         </p>
         <p>
           Phone:<span> {user.phone}</span>
@@ -30,7 +50,7 @@ function UserDetails({ user }) {
         </p>
         <p>
           Website:<span> {user.website}</span>
-        </p>
+        </p> */}
       </div>
       <div>
         <h2>Address</h2>
