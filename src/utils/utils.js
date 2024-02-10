@@ -1,4 +1,8 @@
 export function generateUserTitle(fullName) {
+  if (!fullName || typeof fullName !== 'string') {
+    return null;
+  }
+
   const [firstName, lastName] = fullName.split(' ');
 
   const firstLetterFirstName = firstName.charAt(0);
@@ -9,8 +13,12 @@ export function generateUserTitle(fullName) {
 }
 
 export function cutUserName(fullName) {
-  const [firstName, lastName] = fullName.split(' ');
-  return `${firstName} ${lastName}`;
+  if (!fullName || typeof fullName !== 'string') {
+    return null;
+  }
+
+  const [firstName, lastName] = fullName.trim().split(' ');
+  return lastName ? `${firstName} ${lastName}` : `${firstName}`;
 }
 
 export function capitalizeFirstLetter(string) {

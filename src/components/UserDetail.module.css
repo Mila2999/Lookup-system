@@ -1,0 +1,23 @@
+.itemWrapper {
+  display: flex;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.wrapper {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  padding: 0;
+}
+
+.itemKey {
+  font-weight: bold;
+}
+
+.itemValue {
+  color: #676c78;
+  margin-left: 5px;
+}

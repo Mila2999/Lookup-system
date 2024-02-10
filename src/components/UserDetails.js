@@ -1,42 +1,60 @@
 import { Link } from 'react-router-dom';
 
 import classes from './UserDetails.module.css';
-import { capitalizeFirstLetter } from '../utils/utils';
+
+import UserDetail from './UserDetail';
+
 function UserDetails({ user }) {
   if (!user) {
     return null;
   }
 
   const userInfo = {
-    name: user.name,
-    userName: user.userName,
-    phone: user.phone,
-    email: user.email,
-    website: user.website,
+    title: 'User Info',
+    arr: [
+      { key: 'Name', value: user.name },
+      { key: 'Username', value: user.username },
+      { key: 'Phone', value: user.phone },
+      { key: 'Email', value: user.email },
+      { key: 'Website', value: user.website },
+    ],
   };
 
-  const userInfoHtml = Object.keys(userInfo).map((key) => {
-    return (
-      <div className={classes.wrapperInfo}>
-        <div>{capitalizeFirstLetter(key)}</div>
-        <span className={classes.space}>:</span>
-        <div>{userInfo[key]}</div>
-      </div>
-    );
-  });
+  const userAddress = {
+    title: 'Address',
+    arr: [
+      { key: 'Street', value: user.address.street },
+      { key: 'Suite', value: user.address.suite },
+      { key: 'City', value: user.address.city },
+      { key: 'Zipcode', value: user.address.zipcode },
+    ],
+  };
+
+  const userCompany = {
+    title: 'Company',
+    arr: [
+      { key: 'Name', value: user.company.name },
+      { key: 'CatchPhrase', value: user.company.catchPhrase },
+    ],
+  };
+
+  const userArr = [userInfo, userAddress, userCompany];
 
   return (
     <div>
       <div className={classes.header}>
-        <h2> {user.name.toUpperCase()} </h2>
+        <div className={classes.userTitle}> {user.name.toUpperCase()} </div>
         <Link to="/">
-          <button className={classes.button}>{' < '}Back</button>
+          <button className={classes.buttonLarge}>{' < '}Back</button>
+          <button className={classes.buttonSmall}>{' < '}</button>
         </Link>
       </div>
-      <div>
+      {userArr.map((data) => (
+        <UserDetail data={data} />
+      ))}
+      {/* <div>
         <h2>User Info</h2>
-        {userInfoHtml}
-        {/* <p>
+        <p>
           Name:<span>{user.name}</span>
         </p>
         <p>
@@ -50,9 +68,9 @@ function UserDetails({ user }) {
         </p>
         <p>
           Website:<span> {user.website}</span>
-        </p> */}
-      </div>
-      <div>
+        </p>
+      </div> */}
+      {/* <div>
         <h2>Address</h2>
         <p>
           Street:<span> {user.address.street}</span>
@@ -66,8 +84,8 @@ function UserDetails({ user }) {
         <p>
           Zipcode: <span>{user.address.zipcode}</span>
         </p>
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <h2>Company</h2>
         <p>
           Name: <span>{user.company.name}</span>
@@ -75,7 +93,7 @@ function UserDetails({ user }) {
         <p>
           CatchPhrase: <span>{user.company.catchPhrase}</span>
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
