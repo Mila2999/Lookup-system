@@ -1,16 +1,17 @@
 /* too much CSS i don't understand anything */
 .card {
-  height: 250px;
+  height: 270px;
   width: 18%;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   box-sizing: border-box;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 12px 4px rgba(84, 90, 84, 0.1);
 }
+
 .title {
   display: flex;
   justify-content: center;
@@ -27,9 +28,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
-  min-width: 250px;
 }
+
 @media (max-width: 768px) {
   .card {
     width: 100%;

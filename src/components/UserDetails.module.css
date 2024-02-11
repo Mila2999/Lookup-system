@@ -4,15 +4,10 @@
   align-items: center;
 }
 
-.wrapperInfo {
-  display: flex;
-  width: 50%;
-  margin: 10px 0;
-}
-
-.space {
-  margin: 0 5px;
-  color: black;
+.userName {
+  color: rgb(106, 173, 186);
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .buttonLarge {
@@ -26,6 +21,7 @@
   height: 40px;
   font-size: 14px;
   display: none;
+  text-decoration: none;
 }
 
 .userTitle {

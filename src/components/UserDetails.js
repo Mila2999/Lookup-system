@@ -8,6 +8,7 @@ function UserDetails({ user }) {
   }
 
   const userInfo = {
+    icon: 'faUser',
     title: 'User Info',
     arr: [
       { key: 'Name', value: user.name },
@@ -19,6 +20,7 @@ function UserDetails({ user }) {
   };
 
   const userAddress = {
+    icon: 'faHouse',
     title: 'Address',
     arr: [
       { key: 'Street', value: user.address.street },
@@ -29,6 +31,7 @@ function UserDetails({ user }) {
   };
 
   const userCompany = {
+    icon: 'faBriefcase',
     title: 'Company',
     arr: [
       { key: 'Name', value: user.company.name },
@@ -41,10 +44,10 @@ function UserDetails({ user }) {
   return (
     <div>
       <div className={classes.header}>
-        <div> {user.name.toUpperCase()} </div>
+        <div className={classes.userName}> {user.name.toUpperCase()} </div>
         <Link to="/">
           <button className={classes.buttonLarge}>{' < '}Back</button>
-          <button className={classes.buttonSmall}>{' < '}</button>
+          <button className={classes.buttonSmall}>{'<'}</button>
         </Link>
       </div>
       {userArr.map((data) => (

@@ -9,3 +9,16 @@
   width: 100%;
   height: 100%;
 }
+h2 {
+  text-align: left;
+  color: rgb(128, 185, 195);
+}
+p {
+  font-family: 'Girl Sands', sans-serif;
+  font-size: 18px;
+
+  margin: 0%;
+}
+span {
+  color: #9199ab;
+}
