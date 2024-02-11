@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
-
-import classes from './UserDetails.module.css';
-
 import UserDetail from './UserDetail';
+import classes from './UserDetails.module.css';
 
 function UserDetails({ user }) {
   if (!user) {
@@ -43,7 +41,7 @@ function UserDetails({ user }) {
   return (
     <div>
       <div className={classes.header}>
-        <div className={classes.userTitle}> {user.name.toUpperCase()} </div>
+        <div> {user.name.toUpperCase()} </div>
         <Link to="/">
           <button className={classes.buttonLarge}>{' < '}Back</button>
           <button className={classes.buttonSmall}>{' < '}</button>

@@ -6,3 +6,20 @@
 .childContainer {
   padding: 40px;
 }
+h2 {
+  padding-bottom: 30px;
+  text-align: left;
+  color: rgb(128, 185, 195);
+}
+p {
+  font-family: 'Girl Sands', sans-serif;
+  color: rgb(2, 57, 65);
+  font-size: 18px;
+}
+span {
+  color: rgb(242, 242, 242);
+}
+hr {
+  border: 1px solid #cac8c8;
+  margin: 0px 0px 20px 0px;
+}

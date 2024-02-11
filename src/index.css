@@ -10,25 +10,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-h2 {
-  padding-bottom: 30px;
-  text-align: left;
-  color: rgb(106, 173, 186);
-}
-
-hr {
-  border: 1px solid #e2dfdf;
-  margin: 0px 0px 20px 0px;
-}
-
-p {
-  font-family: 'Girl Sands', sans-serif;
-  color: rgb(2, 57, 65);
-  font-size: 18px;
-}
-span {
-  color: rgb(167, 172, 174, 0.9);
-}
 button {
   width: 100px;
   height: 30px;
@@ -41,17 +22,11 @@ button {
   border: 0;
   margin: 0;
 }
-/* .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-} */
-
+/* 
 .item {
   flex: 1;
   min-width: 300px;
   margin: 10px;
   padding: 20px;
   border: 1px solid #ccc;
-}
+} */

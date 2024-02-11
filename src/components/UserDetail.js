@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './UserDetail.module.css';
 
-import { capitalizeFirstLetter } from '../utils/utils';
 function UserDetails({ data }) {
   if (!data) {
     return null;
@@ -10,6 +12,9 @@ function UserDetails({ data }) {
 
   return (
     <div className={classes.wrapper}>
+      <FontAwesomeIcon icon={faHouse} />
+      <FontAwesomeIcon icon={faUser} />
+      <FontAwesomeIcon icon={faBriefcase} />
       <h2 className={classes.title}>{data.title}</h2>
       {data.arr.map((arrValue) => (
         <div className={classes.itemWrapper}>
