@@ -28,6 +28,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 button {
   width: 100px;
   height: 30px;
@@ -40,9 +41,11 @@ button {
   border: 0;
   margin: 0;
 }
+
 .button:hover {
   background-color: rgb(90, 145, 155);
 }
+
 @media (max-width: 768px) {
   .card {
     width: 100%;
