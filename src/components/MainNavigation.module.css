@@ -11,6 +11,7 @@
   text-align: center;
   justify-content: space-around;
 }
+
 .link {
   font-family: 'Girl Sands', sans-serif;
   color: rgb(2, 57, 65);
@@ -21,9 +22,11 @@
   margin: 0px;
   color: rgb(106, 173, 186);
 }
+
 .userName {
   color: #676c78;
 }
+
 .list {
   display: flex;
   gap: 10px;
@@ -33,10 +36,12 @@
   display: flex;
   flex-direction: row;
 }
+
 .list a {
   display: flex;
   text-decoration: none;
 }
+
 .list a:hover,
 .list a.active {
   color: var(--color-primary-800);

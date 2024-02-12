@@ -1,5 +1,6 @@
-import classes from './Card.module.css';
 import { Link } from 'react-router-dom';
+import classes from './Card.module.css';
+
 function Card(props) {
   return (
     <div className={classes.card}>

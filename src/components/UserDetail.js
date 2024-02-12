@@ -1,8 +1,6 @@
-import classes from './UserDetail.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faUser, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import classes from './UserDetail.module.css';
 
 function getIcon(iconType) {
   switch (iconType) {

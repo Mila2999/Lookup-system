@@ -1,5 +1,4 @@
 import Card from './Card';
-
 import { cutUserName, generateUserTitle } from '../utils/utils';
 import classes from './UsersList.module.css';
 
